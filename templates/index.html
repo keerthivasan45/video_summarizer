@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Summarizer (Link Version)</title>
+</head>
+<body>
+    <h2>Paste a YouTube Video URL</h2>
+    <form method="POST">
+        <input type="url" name="video_url" placeholder="https://youtube.com/..." required style="width: 60%;">
+        <button type="submit">Summarize</button>
+    </form>
+
+    {% if transcript %}
+        <h3>Transcript:</h3>
+        <pre>{{ transcript }}</pre>
+    {% endif %}
+
+    {% if summary %}
+        <h3>Summary:</h3>
+        <pre>{{ summary }}</pre>
+    {% endif %}
+</body>
+</html>
